@@ -6,3 +6,5 @@ Il dataset è scaricato da [qui](http://www.sitr.regione.sicilia.it/component/op
 
 Il tutto è costruito con **mapbox.js** a partire da [questo esempio](https://www.mapbox.com/mapbox.js/example/v1.0.0/choropleth/).
 
+Qui la demo: http://aborruso.github.io/qunione_sicilia/
+
