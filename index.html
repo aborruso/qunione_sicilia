@@ -23,8 +23,15 @@
 
 	<div id='map'></div>
 	<script>
-	var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
+	var map = L.mapbox.map('map')
 	.setView([37.5, 13.8], 8);  var popup = new L.Popup({ autoPan: false });
+
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'aborruso.mf1djn55',
+    accessToken: 'pk.eyJ1IjoiYWJvcnJ1c28iLCJhIjoibFpOMXpEZyJ9.HNHxWxDvvFz5i2mgMEll7Q'
+}).addTo(map);
 
   // statesData comes from the 'us-states.js' script included above
   var qunione = L.geoJson(geojson,  {
@@ -41,6 +48,7 @@
   		fillColor: '#ec7014'
   	};
   }
+
 
   // get color depending on population density value
   function getColor(d) {
